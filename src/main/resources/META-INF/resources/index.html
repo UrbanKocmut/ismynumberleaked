@@ -21,8 +21,15 @@
             });
     }
 </script>
+<style>
+    body {
+        font-family: sans-serif;
+        text-align: center;
+    }
+</style>
 <body>
 <h3>Preveri če je telefonska številka v slovenskem Facebook leaku</h3>
+<p>Več o leaku si lahko prebereš <a href="https://www.rtvslo.si/znanost-in-tehnologija/kraja-na-facebooku-objavljeni-tudi-podatki-vec-kot-110-000-slovenskih-uporabnikov/575610">tukaj</a>.</p>
 <label for="numberInput">Vnesi številko: </label><input id="numberInput" type="tel">
 <button onclick="numberExists(document.getElementById('numberInput').value)">Preveri številko</button>
 <p id="out"></p>
