@@ -1,0 +1,6 @@
+quarkus:
+  native:
+    resources:
+      includes:
+        - numbers.txt
+    container-build: true

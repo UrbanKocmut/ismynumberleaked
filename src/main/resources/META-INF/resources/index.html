@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ismynumberleaked</title>
+</head>
+<script>
+    function numberExists(number) {
+        fetch(window.location.href + "numbers/" + number)
+            .then(response => {
+                switch (response.status) {
+                    case 200:
+                        document.getElementById("out").innerText = "Številka najdena";
+                        break;
+                    case 404:
+                        document.getElementById("out").innerText = "Številka ni najdena";
+                        break;
+                    default:
+                        document.getElementById("out").innerText = "Napaka";
+                }
+            });
+    }
+</script>
+<body>
+<h3>Preveri če je telefonska številka v slovenskem Facebook leaku</h3>
+<label for="numberInput">Vnesi številko: </label><input id="numberInput" type="tel">
+<button onclick="numberExists(document.getElementById('numberInput').value)">Preveri številko</button>
+<p id="out"></p>
+</body>
+</html>
